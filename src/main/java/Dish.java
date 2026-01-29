@@ -50,4 +50,18 @@ public class Dish {
         return ingredients.getFirst().getPrice();
     }
 
+    public void addIngredient(Ingredient ingredient) {
+        ingredient.setDish(this);
+        ingredients.add(ingredient);
+    }
+
+    @Override
+    public String toString() {
+        return "Dish{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", dish_type=" + dish_type +
+                ", ingredients=" + ingredients +
+                '}';
+    }
 }
